@@ -114,7 +114,7 @@ portfolio-zalina/
 ---
 
 ## 🎓 Об авторе
-<table> <tr> <td width="80px"> <div style="width: 70px; height: 70px; border-radius: 50%; background: linear-gradient(135deg, #00ff41, #4dabf7, #9775fa); display: flex; align-items: center; justify-content: center; font-size: 28px; font-weight: 700; color: #fff;">Z</div> </td> <td> <b>Zalina Aliskerova</b><br> 🎓 Студентка 3 курса, специальность 09.02.07<br> 📍 Москва, Россия<br> 💼 Open to opportunities </td> </tr> </table>
+ <b>Zalina Aliskerova</b><br> 🎓 Студентка 3 курса, специальность 09.02.07<br> 📍 Москва, Россия<br> 💼 Open to opportunities </td> </tr> </table>
 
 
 ## 📄 Лицензия
