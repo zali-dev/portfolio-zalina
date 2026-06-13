@@ -1497,6 +1497,9 @@ const Terminal = ({ onSpecialCommand, projects, projectsLoading, keyboardSound, 
       setHistory(prev => [...prev, { type: 'output', text: result.output, color: result.color }]);
       return result;
     } else if (cmd !== '') {
+      
+	  } else if (cmd !== '') {
+      console.log('🔥 GLITCH TRIGGERED'); // ← ДОБАВЬ
       setGlitchActive(true);
       setTimeout(() => setGlitchActive(false), 400);
       
@@ -1661,9 +1664,9 @@ const Terminal = ({ onSpecialCommand, projects, projectsLoading, keyboardSound, 
     </TerminalCard>
   );
 
-	  // Передаём глитч в App через onSpecialCommand
 	useEffect(() => {
 	  if (glitchActive) {
+		console.log('📡 SENDING GLITCH TO APP');
 		onSpecialCommand?.('glitch');
 	  }
 	}, [glitchActive]);
@@ -1834,6 +1837,7 @@ function App() {
       setTimeout(() => setMatrixActive(false), 10000);
     }
     if (special === 'glitch') {
+      console.log('💥 GLITCH RECEIVED IN APP'); // ← ДОБАВЬ
       setGlitchActive(true);
       setTimeout(() => setGlitchActive(false), 500);
     }
