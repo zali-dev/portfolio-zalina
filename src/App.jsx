@@ -1000,31 +1000,39 @@ const generateResumePDF = () => {
   import('jspdf').then(({ default: jsPDF }) => {
     const doc = new jsPDF();
     
+    // Фон
     doc.setFillColor(10, 10, 15);
     doc.rect(0, 0, 210, 297, 'F');
     
+    // Имя — крупно
     doc.setTextColor(0, 255, 65);
     doc.setFont('Courier', 'Bold');
     doc.setFontSize(28);
     doc.text('ZALINA', 105, 30, { align: 'center' });
     
+    // Линия
     doc.setDrawColor(0, 255, 65);
     doc.setLineWidth(0.5);
     doc.line(20, 38, 190, 38);
     
+    // Контакты — мелко
     doc.setFontSize(10);
+    doc.setFont('Courier', 'Normal');
     doc.setTextColor(200, 200, 200);
     doc.text('GitHub: github.com/zalina-devops', 105, 50, { align: 'center' });
     doc.text('Email: z.devops19@proton.me', 105, 57, { align: 'center' });
     doc.text('Location: Moscow, Russia', 105, 64, { align: 'center' });
     
-    doc.setFontSize(16);
+    // Образование
+    doc.setFontSize(14);
+    doc.setFont('Courier', 'Bold');
     doc.setTextColor(77, 171, 247);
     doc.text('EDUCATION', 20, 80);
     doc.setDrawColor(77, 171, 247);
     doc.line(20, 83, 190, 83);
     
-    doc.setFontSize(11);
+    doc.setFontSize(10);
+    doc.setFont('Courier', 'Normal');
     doc.setTextColor(220, 220, 220);
     doc.text('Moscow State College', 20, 93);
     doc.setTextColor(180, 180, 180);
@@ -1032,30 +1040,36 @@ const generateResumePDF = () => {
     doc.text('Year: 3rd (2 years remaining)', 20, 107);
     doc.text('Goal: University enrollment in Applied Informatics (2028)', 20, 114);
     
-    doc.setFontSize(16);
+    // Навыки
+    doc.setFontSize(14);
+    doc.setFont('Courier', 'Bold');
     doc.setTextColor(151, 117, 250);
     doc.text('SKILLS', 20, 132);
     doc.setDrawColor(151, 117, 250);
     doc.line(20, 135, 190, 135);
     
     const skills = [
-      ['Security:', 'Network Security, OWASP Top 10, Wireshark, Nmap'],
-      ['DevOps:', 'Docker, CI/CD, Linux, Bash, GitHub Actions'],
-      ['Development:', 'Python, JavaScript, React, Flask, HTML/CSS'],
-      ['Tools:', 'Git, VS Code, Postman, Figma, Terminal']
+      { category: 'Security', items: 'Network Security, OWASP Top 10, Wireshark, Nmap' },
+      { category: 'DevOps', items: 'Docker, CI/CD, Linux, Bash, GitHub Actions' },
+      { category: 'Development', items: 'Python, JavaScript, React, Flask, HTML/CSS' },
+      { category: 'Tools', items: 'Git, VS Code, Postman, Figma, Terminal' }
     ];
     
     let y = 145;
-    skills.forEach(([category, items]) => {
-      doc.setTextColor(200, 200, 200);
+    skills.forEach(({ category, items }) => {
       doc.setFont('Courier', 'Bold');
-      doc.text(category, 20, y);
+      doc.setFontSize(10);
+      doc.setTextColor(200, 200, 200);
+      doc.text(category + ':', 20, y);
       doc.setFont('Courier', 'Normal');
-      doc.text(items, 58, y);
+      doc.setTextColor(180, 180, 180);
+      doc.text(items, 55, y);
       y += 8;
     });
     
+    // Подвал
     doc.setFontSize(8);
+    doc.setFont('Courier', 'Normal');
     doc.setTextColor(100, 100, 100);
     doc.text('Generated from portfolio-kernel.vercel.app', 105, 280, { align: 'center' });
     
