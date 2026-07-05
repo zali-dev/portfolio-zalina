@@ -18,21 +18,20 @@ export const profile = {
       name: 'config-files',
       description: 'Personal dotfiles & development environment setup scripts',
       stack: ['Bash', 'YAML', 'Linux'],
-      url: 'https://github.com/zalina-devops/config-files'
+      url: 'https://github.com/zali-dev/config-files'
     },
     {
       name: 'simple-port-scanner',
       description: 'Educational TCP port scanner with basic evasion techniques',
       stack: ['Python', 'Socket', 'Threading'],
-      url: 'https://github.com/zalina-devops/simple-port-scanner'
+      url: 'https://github.com/zali-dev/simple-port-scanner'
     }
   ],
 
   contact: {
     email: 'z.devops19@proton.me',
-    github: 'github.com/zalina-devops',
-    telegram: 't.me/zalina_devops',
-    linkedin: 'linkedin.com/in/zalina-profile'
+    github: 'github.com/zali-dev',
+    telegram: 't.me/zalina_devops'
   },
 
   easterEggs: {

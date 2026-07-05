@@ -871,7 +871,7 @@ const profile = {
   ],
 
   contact: {
-    github: 'https://github.com/zalina-devops',
+    github: 'https://github.com/zali-dev',
     email: 'mailto:z.devops19@proton.me',
     //telegram: 'https://t.me/zalina_devops',
     //linkedin: 'https://linkedin.com/in/zalina-profile'
@@ -1153,7 +1153,7 @@ const generateResumePDF = () => {
     doc.setFontSize(10);
     doc.setFont('Courier', 'Normal');
     doc.setTextColor(200, 200, 200);
-    doc.text('GitHub: github.com/zalina-devops', 105, 50, { align: 'center' });
+    doc.text('GitHub: github.com/zali-dev', 105, 50, { align: 'center' });
     doc.text('Email: z.devops19@proton.me', 105, 57, { align: 'center' });
     doc.text('Location: Moscow, Russia', 105, 64, { align: 'center' });
     
@@ -1333,7 +1333,7 @@ ${lines.join('\n')}
     ).join('\n\n');
 
     return {
-      output: `>>> LIVE DATA FROM github.com/zalina-devops\n>>> Found ${projects.length} repositories\n\n${list}`,
+      output: `>>> LIVE DATA FROM github.com/zali-dev\n>>> Found ${projects.length} repositories\n\n${list}`,
       color: theme.green
     };
   },
@@ -1358,7 +1358,7 @@ ${lines.join('\n')}
 >>> ESTABLISHING CONNECTION...
 
   Email:    z.devops19@proton.me
-  GitHub:   github.com/zalina-devops
+  GitHub:   github.com/zali-dev
   Telegram: t.me/zalina_devops
   LinkedIn: linkedin.com/in/zalina-profile
 
@@ -2095,7 +2095,7 @@ function App() {
   const [activeTab, setActiveTab] = useState('terminal');
   const [matrixActive, setMatrixActive] = useState(false);
   const [glitchActive, setGlitchActive] = useState(false);
-  const { projects, loading: projectsLoading } = useGitHubProjects('zalina-devops');
+  const { projects, loading: projectsLoading } = useGitHubProjects('zali-dev');
   const keyboardSound = useKeyboardSound();
   const gameHook = useHackGame();
   const mousePos = useParallax();

@@ -72,7 +72,7 @@ ${formatSkills(profile.skills.tools)}
 
     return {
       output: `
->>> FETCHING FROM github.com/zalina-devops...
+>>> FETCHING FROM github.com/zali-dev...
 >>> Repositories found: ${profile.projects.length}
 
 ${projectList}
