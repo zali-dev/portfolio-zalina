@@ -9,7 +9,7 @@
 ### Интерактивное терминальное портфолио
 
 [![Site](https://img.shields.io/badge/🌐_Live_Site-portfolio--zalina.vercel.app-00cc34?style=for-the-badge)](https://portfolio-zalina.vercel.app)
-[![GitHub](https://img.shields.io/badge/🐙_GitHub-zalina--devops-9775fa?style=for-the-badge)](https://github.com/zali-dev)
+[![GitHub](https://img.shields.io/badge/🐙_GitHub-zali--dev-9775fa?style=for-the-badge)](https://github.com/zali-dev)
 
 </div>
 
